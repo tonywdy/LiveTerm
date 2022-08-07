@@ -14,11 +14,11 @@ export const help = async (args: string[]): Promise<string> => {
       c += Object.keys(bin).sort()[i - 1] + ' ';
     }
   }
-  return `Welcome! Here are all the available commands:
+  return `欢迎使用本终端程序，以下是所有可用命令：
 \n${c}\n
-[tab]: trigger completion.
-[ctrl+l]/clear: clear terminal.\n
-Type 'sumfetch' to display summary.
+[tab]: 快捷补充命令
+[ctrl+l]/clear: 清屏\n
+键入“sumfetch”以显示摘要。
 `;
 };
 
@@ -30,12 +30,12 @@ export const repo = async (args: string[]): Promise<string> => {
 
 // About
 export const about = async (args: string[]): Promise<string> => {
-  return `Hi, I am ${config.name}. 
-Welcome to my website!
-More about me:
-'sumfetch' - short summary.
-'resume' - my latest resume.
-'readme' - my github readme.`;
+  return `Hi, 我是 ${config.name}. 
+欢迎访问我的网站！
+更多关于我的信息：
+'sumfetch' - 这是一个简短的总结。
+'resume' - 这是我最新的简历。
+'readme' - 我的github自述。`;
 };
 
 export const resume = async (args: string[]): Promise<string> => {
@@ -45,10 +45,9 @@ export const resume = async (args: string[]): Promise<string> => {
 
 // Donate
 export const donate = async (args: string[]): Promise<string> => {
-  return `thank you for your interest. 
-here are the ways you can support my work:
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
+  return `谢谢你的关注。
+以下是支持我的方法：
+- <img src="https://gitlab.com/KINGWDY/photobed/-/raw/main/20220802152616.png">
 `;
 };
 
